@@ -61,4 +61,14 @@ a maneira como os itens ficarão espaçados e alinhados dentro de um container
     linha reversa: eixo horizontal com itens flexíveis da direita para a esquerda
     coluna: eixo vertical com itens flexíveis de cima para baixo
     coluna reversa: eixo vertical com itens flexíveis de baixo para cima
+    
+O pseudoelemento ::after cria um elemento que é o último filho do elemento selecionado. 
+Você pode usá-lo para adicionar um elemento vazio após a última imagem. 
+Se você atribuir a mesma largura das imagens, a última imagem será empurrada para a esquerda 
+quando a galeria estiver em um layout de duas colunas. 
+No momento, está no centro porque você configurou justify-content: center no flex container.    
     */
+.gallery::after{
+    content: "";
+    width: 350px;
+}
