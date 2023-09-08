@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;/*Essa propriedade diz ao browser
+    para levar em consideração todo valor atribuído às bordas e ao padding
+    que você especifica a um elemento. */
+} /*Normalizando o elemento de box.
+É utilizado para calcular o tamanho total da
+largura e da altura e como é calculado*/
+.gallery img{
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    /*Observe como algumas de suas imagens ficaram distorcidas. Isso ocorre porque as imagens têm proporções 
+    diferentes. Em vez de definir cada proporção individualmente, 
+    você pode usar a propriedade 'object-fit' para determinar como as imagens devem se comportar.*/
+    object-fit: cover; /*faz com que as imagens não fiquem distoscidar dentro de um container,
+    mantendo seu aspecto de proporção, cortando a imagem para se adaptar ao estilo escolhido*/
+    border-radius: 10px;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+}
+.header{
+    /*Alinha o header no centro*/
+    text-transform: uppercase; /*define que o texto será todo
+    com letras maiúsculas*/
+    padding: 32px 32px 32px 32px;
+    background:#0a0a23;
+    color: #fff; /*define a cor do texto*/
+    text-align: center; /*define que o centro do código de texto
+    deve ser centralizado*/
+    border-bottom: 4px solid #fdb347; /*define uma margem
+    para a caixa superior da galeria*/
+}
+/*O css box é um layout com uma dimensão que controla
+a maneira como os itens ficarão espaçados e alinhados dentro de um container
+*/
+.gallery{
+    display: flex;
+    flex-direction: row;
+    /*A propriedade flex-wrap determina como seus itens flexíveis se comportam quando o contêiner 
+    flexível é muito pequeno. Configurá-lo para quebrar permitirá que os itens sejam quebrados na próxima 
+    linha ou coluna. 'nowrap' (importante e padrão) impedirá que seus itens sejam embrulhados e os encolherá, se necessário.*/
+    flex-wrap: wrap;
+    /*A propriedade 'justify-content' determina como os itens dentro de um flex container 
+    são posicionados ao longo do eixo principal, afetando sua posição e o espaço ao seu redor.*/
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    /*A propriedade abreviada CSS 'gap' define as lacunas, também conhecidas como calhas, entre linhas e colunas. 
+    A propriedade 'gap' e suas subpropriedades 'row-gap' e 'column-gap' fornecem essa funcionalidade para layout 
+    flexível, de grade e de múltiplas colunas. Você aplica a propriedade ao elemento contêiner.*/
+    gap: 16px;
+}
+/*Flexbox possui eixo principal e eixo transversal. O eixo principal é definido pela propriedade flex-direction, que possui quatro valores possíveis:
+
+    linha (padrão): eixo horizontal com itens flexíveis da esquerda para a direita
+    linha reversa: eixo horizontal com itens flexíveis da direita para a esquerda
+    coluna: eixo vertical com itens flexíveis de cima para baixo
+    coluna reversa: eixo vertical com itens flexíveis de baixo para cima
+    */
